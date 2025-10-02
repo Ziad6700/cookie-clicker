@@ -17,16 +17,21 @@ class clicker{
 
 class upgrades{  
    
-    constructor (cookiePerSecond) {
-        cookiePerSecond
+    constructor (cookiePerSecond, price) {
+        this.cookiePerSecond = cookiePerSecond;
+        this.price = price;
     }
 
     dfghj(){
 
-        if (cookieTotal >= 5) {
+        if (cookieTotal >= this.price) {
             cookieClicker1.cps += 2;
-            cookieTotal -= 5;
+            cookieTotal -= this.price;
+            this.price = Math.floor(this.price * 1.5);
+            cookieClicker1.cps = Math.floor(cookieClicker1.cps * 1.2);
+
              document.getElementById("counter").textContent = cookieTotal;
+             document.getElementById("priceClicker").textContent = "price:" + this.price;
         } else {
             console.log ("niet genoeg cookies");
         }
@@ -36,6 +41,6 @@ class upgrades{
 let cookieClicker1 = new clicker();
 cookieClicker1.plusCookies();
 
-let yupgrade1 = new upgrades();
-yupgrade1.cookiePerSecond = 2;
-yupgrade1.dfghj();
+let upgrade1 = new upgrades(2, 5);
+
+upgrade1.dfghj();
