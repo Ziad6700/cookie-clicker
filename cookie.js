@@ -42,7 +42,7 @@ class Upgrades{
             this.$upgradeAmount = this.$upgradeAmount * 1.2;
 
             //  document.getElementById("counter").textContent = cookieTotal;
-             document.getElementById("priceClicker").textContent = "clicker upgrade:" + this.price;
+             document.getElementById("priceClicker").textContent = "clicker:" + this.price;
         } else {
             console.log ("niet genoeg cookies");
         }
@@ -67,7 +67,21 @@ class AutoGenerater{
             this.amount += 1;
             cookieTotal.add(-this.price);
             this.price = Math.floor(this.price * 1.5);
-                  document.getElementById("generator").textContent = "grandma:" + this.price;
+                  document.getElementById("grandma").textContent = "grandma: " + grandma.price  + " amount: " + grandma.amount;
+
+                    document.getElementById("factory").textContent = "factory:" + factory.price;
+
+                    document.getElementById("mines").textContent = "mines:" + mines.price;
+
+                    document.getElementById("farms").textContent = "farms:" + farms.price;
+
+                    document.getElementById("bank").textContent = "bank:" + bank.price;
+
+                    document.getElementById("temple").textContent = "temple:" + temple.price;
+
+                    document.getElementById("wizzardTower").textContent = "wizzard tower:" + wizzardTower.price;
+                    
+                    document.getElementById("shipment").textContent = "shipment:" + shipment.price;
     } else {
         console.log("niet genoeg");
     }
@@ -83,7 +97,31 @@ let cookieClicker1 = new Clicker();
 // cookieClicker1.plusCookies();
 
 let upgrade1 = new Upgrades(2, 5);
-upgrade1.dfghj();
+
 
 let grandma = new AutoGenerater(3, 5);
-grandma.buy();
+
+
+let factory = new AutoGenerater(10, 20);
+
+
+let mines = new AutoGenerater(20, 60);
+
+
+let farms = new AutoGenerater(50, 100);
+
+
+let bank = new AutoGenerater(80, 150);
+
+
+let temple = new AutoGenerater(150, 500);
+
+
+let wizzardTower = new AutoGenerater(400, 1200);
+
+
+let shipment = new AutoGenerater(750, 2000);
+
+
+
+
