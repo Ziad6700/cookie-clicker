@@ -5,36 +5,56 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="./dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-red-500">
+<body class="bg-cover bg-center min-h-screen">
   <header>
-  <h1 class="text-3xl font-bold underline">
+  <h1 class="text-3xl font-bold mx-auto">
     Cookie clicker
   </h1>
 </header>
 
+
 <main>
-  <h3>cookies: <span id="counter">0</span></h3>
-  <button onclick="cookieClicker1.plusCookies()">
-  <img src="./images/PerfectCookie.webp" class="w-40 animate-spin-slow">
+  <div class="w-fit mx-auto my-40 flex flex-col items-center space-y-4">
+  <h3 class="">cookies: <span id="counter">0</span></h3>
+  <button class="" onclick="cookieClicker1.plusCookies()">
+  <img src="./images/PerfectCookie.webp" class="w-40 animate-spin-slow cursor-pointer">
   </button>
+  </div>
 
   <button class="bg-gray-500" id="grandma" onclick="grandma.buy()">grandma: 5 amount: 0</button>
 
-    <button class="bg-gray-500" id="factory" onclick="factory.buy()">factory: 20</button>
+    <button class="bg-gray-500" id="factory" onclick="factory.buy()">factory: 20 amount: 0</button>
 
-    <button class="bg-gray-500" id="mines" onclick="mines.buy()">mines: 60</button>
+    <button class="bg-gray-500" id="mines" onclick="mines.buy()">mines: 60 amount: 0</button>
 
-     <button class="bg-gray-500" id="farms" onclick="farms.buy()">farms: 100</button>
+     <button class="bg-gray-500" id="farms" onclick="farms.buy()">farms: 100 amount: 0</button>
 
-      <button class="bg-gray-500" id="bank" onclick="bank.buy()">bank: 150</button>
+      <button class="bg-gray-500" id="bank" onclick="bank.buy()">bank: 150 amount: 0</button>
 
-       <button class="bg-gray-500" id="temple" onclick="temple.buy()">temple: 500</button>
+       <button class="bg-gray-500" id="temple" onclick="temple.buy()">temple: 500 amount: 0</button>
 
-       <button class="bg-gray-500" id="wizzardTower" onclick="wizzardTower.buy()">wizzard tower: 1200</button>
+       <button class="bg-gray-500" id="wizzardTower" onclick="wizzardTower.buy()">wizzard tower: 1200 amount: 0</button>
 
-       <button class="bg-gray-500" id="shipment" onclick="shipment.buy()">shipment: 2000</button>
+       <button class="bg-gray-500" id="shipment" onclick="shipment.buy()">shipment: 2000 amount: 0</button>
 
-  <button class="bg-gray-500" id="priceClicker" onclick="upgrade1.dfghj()">Clicker: 5</button>
+  <button class="bg-gray-500" id="priceClicker" onclick="clickerUpgrade.clickUpgrade()">Clicker: 5 amount: 0</button>
+
+   <button class="bg-gray-500 hidden" id="priceGrandmaUpgrade" onclick="grannyBooster.grannyUpgrade()">grandma upgrade: 10</button>
+
+   <button class="bg-gray-500 hidden" id="priceFactoryUpgrade" onclick="factoryBooster.factoriesUpgrade()">factorie upgrade: 10</button>
+
+   <button class="bg-gray-500 hidden" id="priceMineUpgrade" onclick="mineBooster.mineUpgrade()">factorie upgrade: 10</button>
+
+   <button class="bg-gray-500 hidden" id="priceFarmUpgrade" onclick="farmBooster.farmUpgrade()">farm upgrade: 10</button>
+
+   <button class="bg-gray-500 hidden" id="priceBankUpgrade" onclick="bankBooster.bankUpgrade()">bank upgrade: 10</button>
+
+   <button class="bg-gray-500 hidden" id="priceTempleUpgrade" onclick="templeBooster.templeUpgrade()">temple upgrade: 10</button>
+
+   <button class="bg-gray-500 hidden" id="priceWizzardTowerUpgrade" onclick="wizzardTowerBooster.wizzardTowerUpgrade()">wizzard tower upgrade: 10</button>
+
+   <button class="bg-gray-500 hidden" id="priceShipmentUpgrade" onclick="shipmentBooster.shipmentUpgrade()">shipment upgrade: 10</button>
+
 </main>
 <script src="cookie.js"></script>
 </body>
