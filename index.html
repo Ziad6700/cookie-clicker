@@ -5,56 +5,95 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <link href="./dist/output.css" rel="stylesheet">
 </head>
-<body class="bg-cover bg-center min-h-screen">
+<body class="bg-cover bg-center w-screen overflow-x-hidden overflow-hidden">
   <header>
-  <h1 class="text-3xl font-bold mx-auto">
-    Cookie clicker
-  </h1>
+  <h1 class="text-3xl font-bold text-center mt-10">
+  Cookie clicker
+</h1>
 </header>
 
+<div class="absolute left-5 flex flex-col gap-2 h-120 rounded-xl mt-24">
+  <h2 class="text-white text-2xl ml-20 mb-2">Achievements</h2>
+<div class="flex flex-row flex-wrap bg-[#78350F] gap-3 p-2 rounded-xl h-28 w-80">
+<button title="congrats on your first 100 cookies" id="cookieAchievement" class="h-10 w-10 rounded-md hidden"><img id="cookieAchieve" class="w-9 h-8" src="./images/cookieachievement.png"></button>
+<button title="congrats on your first 5 grandma's" id="grandmaAchievement" class="h-10 w-10 rounded-md hidden"><img id="grandmaAchieve" class="w-9 h-8" src="./images/grandmaachievement.webp"></button>
+<button title="congrats on your first 5 factories" id="factoryAchievement" class="h-10 w-10 rounded-md hidden"><img id="factoryAchieve" class="w-9 h-8" src="./images/factoryachievement.png"></button>
+<button title="congrats on your first 5 mines" id="mineAchievement" class="h-10 w-10 rounded-md hidden"><img id="mineAchieve" class="w-9 h-8" src="./images/mineachievement.png"></button>
+<button title="congrats on your first 5 farms" id="farmAchievement" class="h-10 w-10 rounded-md hidden"><img id="farmAchieve" class="w-9 h-8" src="./images/farmachievement.png"></button>
+<button title="congrats on your first 5 banks" id="bankAchievement" class="h-10 w-10 rounded-md hidden"><img id="bankAchieve" class="w-9 h-8" src="./images/bankachievement.png"></button>
+<button title="congrats on your first 5 temples" id="templeAchievement" class="h-10 w-10 rounded-md hidden"><img id="templeAchieve" class="w-9 h-8" src="./images/templeachievement.png"></button>
+<button title="congrats on your first 5 wizzards" id="wizzardAchievement" class="h-10 w-10 rounded-md hidden"><img id="wizzardAchieve" class="w-9 h-8" src="./images/wizzardachievement.png"></button>
+<button title="congrats on your first 5 shipments" id="shipmentAchievement" class="h-10 w-10 rounded-md hidden"><img id="shipmentAchieve" class="w-9 h-8" src="./images/shipmentachievement.png"></button>
+</div>
+</div>
+</div>
 
-<main>
-  <div class="w-fit mx-auto my-40 flex flex-col items-center space-y-4">
-  <h3 class="">cookies: <span id="counter">0</span></h3>
-  <button class="" onclick="cookieClicker1.plusCookies()">
-  <img src="./images/PerfectCookie.webp" class="w-40 animate-spin-slow cursor-pointer">
+<main class="relative h-screen flex items-center justify-center">
+  <div class="w-fit mx-auto mb-52 flex flex-col items-center space-y-4 ">
+    <div class="bg-[#F5E9D4] w-52 h-15 rounded-xl">
+  <h4 class="flex items-center justify-center gap-2 mt-1"><img class="w-8 h-8" src="./images/cookie.png"> cookies: <span id="counter">0</span></h4>
+  <h4 class="ml-20" ><span class="" id="cookiesPerSecond">cps: 0</span></h4>
+  </div>
+  <div class="mt-10">
+  <button class=" mt-10" onclick="cookieClicker1.plusCookies()">
+  <img src="./images/PerfectCookie.webp" class="w-52 animate-spin-slow cursor-pointer">
   </button>
   </div>
+  </div>
 
-  <button class="bg-gray-500" id="grandma" onclick="grandma.buy()">grandma: 5 amount: 0</button>
+  <div class="relative">
+  <div class="absolute right-1">
+  <div class="flex flex-row flex-wrap bg-[#78350F] gap-3 p-2 rounded-xl h-10 w-52">
 
-    <button class="bg-gray-500" id="factory" onclick="factory.buy()">factory: 20 amount: 0</button>
 
-    <button class="bg-gray-500" id="mines" onclick="mines.buy()">mines: 60 amount: 0</button>
+  </div>
+  </div>
+  </div>
 
-     <button class="bg-gray-500" id="farms" onclick="farms.buy()">farms: 100 amount: 0</button>
 
-      <button class="bg-gray-500" id="bank" onclick="bank.buy()">bank: 150 amount: 0</button>
+    <div class="absolute right-5 flex flex-col gap-2 h-120 rounded-xl">
 
-       <button class="bg-gray-500" id="temple" onclick="temple.buy()">temple: 500 amount: 0</button>
+      <h2 class="text-white text-2xl ml-36 mb-2">Store</h2>
 
-       <button class="bg-gray-500" id="wizzardTower" onclick="wizzardTower.buy()">wizzard tower: 1200 amount: 0</button>
+         <div class="flex flex-row flex-wrap bg-[#78350F] gap-3 p-2 rounded-xl h-28 w-80">
+   <button title="upgrade grandma: 10 cookies" class="hidden h-10 w-10 rounded-md" id="priceGrandmaUpgrade" onclick="grannyBooster.grannyUpgrade()"><img class="w-8 h-8" src="./images/lovegranny.webp"></button>
 
-       <button class="bg-gray-500" id="shipment" onclick="shipment.buy()">shipment: 2000 amount: 0</button>
+   <button title="upgrade factory: 10 cookies" class="hidden h-10 w-10 rounded-md" id="priceFactoryUpgrade" onclick="factoryBooster.factoriesUpgrade()"><img class="w-8 h-8" src="./images/factorylove.png"></button>
 
-  <button class="bg-gray-500" id="priceClicker" onclick="clickerUpgrade.clickUpgrade()">Clicker: 5 amount: 0</button>
+   <button title="upgrade mine: 10 cookies" class="hidden h-10 w-10 rounded-md" id="priceMineUpgrade" onclick="mineBooster.mineUpgrade()"><img class="w-8 h-8" src="./images/minelove.png"></button>
 
-   <button class="bg-gray-500 hidden" id="priceGrandmaUpgrade" onclick="grannyBooster.grannyUpgrade()">grandma upgrade: 10</button>
+   <button title="upgrade farm: 10 cookies" class="hidden h-10 w-10 rounded-md" id="priceFarmUpgrade" onclick="farmBooster.farmUpgrade()"><img class="w-8 h-8" src="./images/watercanlove.webp"></button>
 
-   <button class="bg-gray-500 hidden" id="priceFactoryUpgrade" onclick="factoryBooster.factoriesUpgrade()">factorie upgrade: 10</button>
+   <button title="upgrade bank: 10 cookies" class="hidden h-10 w-10 rounded-md" id="priceBankUpgrade" onclick="bankBooster.bankUpgrade()"><img class="w-8 h-8" src="./images/moneysack.webp"></button>
+ 
+   <button title="upgrade temple: 10 cookies" class="hidden h-10 w-10 rounded-md" id="priceTempleUpgrade" onclick="templeBooster.templeUpgrade()"><img class="w-8 h-8" src="./images/minetorch.png"></button>
 
-   <button class="bg-gray-500 hidden" id="priceMineUpgrade" onclick="mineBooster.mineUpgrade()">factorie upgrade: 10</button>
+   <button title="upgrade wizzards: 10 cookies" class="hidden h-10 w-10 rounded-md" id="priceWizzardTowerUpgrade" onclick="wizzardTowerBooster.wizzardTowerUpgrade()"><img class="w-8 h-8" src="./images/wizzard.png"></button>
 
-   <button class="bg-gray-500 hidden" id="priceFarmUpgrade" onclick="farmBooster.farmUpgrade()">farm upgrade: 10</button>
+   <button title="upgrade shipment: 10 cookies" class="hidden h-10 w-10 rounded-md" id="priceShipmentUpgrade" onclick="shipmentBooster.shipmentUpgrade()"><img class="w-8 h-8" src="./images/rocketlove.png"></button>
+      </div>
+   
+      <div class="flex flex-col gap-2 bg-[#78350F] h-112 w-80 mb-28">
+  <button class="bg-[#F5E9D4] flex items-center justify-center gap-2 w-72 h-10 mt-3 ml-4 rounded-xl" id="priceClicker" onclick="clickerUpgrade.clickUpgrade()"><img src="./images/cursor.png" class="w-8 h-8" alt="cursor">Clicker: 5 amount: 0</button>
 
-   <button class="bg-gray-500 hidden" id="priceBankUpgrade" onclick="bankBooster.bankUpgrade()">bank upgrade: 10</button>
+  <button class="bg-[#F5E9D4] flex items-center justify-center gap-2 w-72 h-10 ml-4 rounded-xl" id="grandma" onclick="grandma.buy()"><img src="./images/grandma.png" class="w-8 h-10 rounded" alt="grandma"> grandma: 5 amount: 0</button>
 
-   <button class="bg-gray-500 hidden" id="priceTempleUpgrade" onclick="templeBooster.templeUpgrade()">temple upgrade: 10</button>
+    <button class="bg-[#F5E9D4] flex items-center justify-center gap-2 w-72 h-10 ml-4 rounded-xl" id="factory" onclick="factory.buy()"><img src="./images/factory.webp" class="w-8 h-10" alt="factory"> factory: 20 amount: 0</button>
 
-   <button class="bg-gray-500 hidden" id="priceWizzardTowerUpgrade" onclick="wizzardTowerBooster.wizzardTowerUpgrade()">wizzard tower upgrade: 10</button>
+    <button class="bg-[#F5E9D4] flex items-center justify-center gap-2 w-72 h-10 ml-4 rounded-xl" id="mines" onclick="mines.buy()"><img src="./images/mine.png" class="w-8 h-10" alt="mines"> mines: 60 amount: 0</button>
 
-   <button class="bg-gray-500 hidden" id="priceShipmentUpgrade" onclick="shipmentBooster.shipmentUpgrade()">shipment upgrade: 10</button>
+     <button class="bg-[#F5E9D4] flex items-center justify-center gap-2 w-72 h-10 ml-4 rounded-xl" id="farms" onclick="farms.buy()"><img src="./images/farm.webp" class="w-8 h-10" alt="farms"> farms: 100 amount: 0</button>
 
+      <button class="bg-[#F5E9D4] flex items-center justify-center gap-2 w-72 h-10 ml-4 rounded-xl" id="bank" onclick="bank.buy()"><img src="./images/bank.png" class="w-8 h-10" alt="banks"> bank: 150 amount: 0</button>
+
+       <button class="bg-[#F5E9D4] flex items-center justify-center gap-2 w-72 h-10 ml-4 rounded-xl" id="temple" onclick="temple.buy()"><img src="./images/temple.webp" class="w-8 h-10" alt="temples"> temple: 500 amount: 0</button>
+
+       <button class="bg-[#F5E9D4] flex items-center justify-center gap-2 w-72 h-10 ml-4 rounded-xl" id="wizzardTower" onclick="wizzardTower.buy()"><img src="./images/wizzardtower.webp" class="w-10 h-10" alt="wizzards"> wizzards: 1200 amount: 0</button>
+
+       <button class="bg-[#F5E9D4] flex items-center justify-center gap-2 w-72 h-10 ml-4 rounded-xl" id="shipment" onclick="shipment.buy()"><img src="./images/ship.webp" class="w-8 h-8" alt="ship"> shipment: 2000 amount: 0</button>
+
+      </div>
+    </div>
 </main>
 <script src="cookie.js"></script>
 </body>
