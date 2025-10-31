@@ -41,12 +41,10 @@
   </div>
   </div>
 
-  <div class="relative">
-  <div class="absolute right-1">
-  <div class="flex flex-row flex-wrap bg-[#78350F] gap-3 p-2 rounded-xl h-10 w-52">
-
-
-  </div>
+ 
+  <div class="absolute right-96">
+  <div id="notEnoughCookies" class="flex flex-row flex-wrap bg-gray-800 gap-3 p-2 rounded-xl h-10 w-52 animate-pulse-heart hidden">
+  <h3 class="text-red-600 ml-5">not enough cookies!</h3>
   </div>
   </div>
 
@@ -56,7 +54,7 @@
       <h2 class="text-white text-2xl ml-36 mb-2">Store</h2>
 
          <div class="flex flex-row flex-wrap bg-[#78350F] gap-3 p-2 rounded-xl h-28 w-80">
-   <button title="upgrade grandma: 10 cookies" class="hidden h-10 w-10 rounded-md" id="priceGrandmaUpgrade" onclick="grannyBooster.grannyUpgrade()"><img class="w-8 h-8" src="./images/lovegranny.webp"></button>
+   <button title="upgrade grandma: 10 cookies" class="hidden h-10 w-10 rounded-md upgradeicon" id="priceGrandmaUpgrade" onclick="grannyBooster.grannyUpgrade()"><img class="w-8 h-8" src="./images/lovegranny.webp"></button>
 
    <button title="upgrade factory: 10 cookies" class="hidden h-10 w-10 rounded-md" id="priceFactoryUpgrade" onclick="factoryBooster.factoriesUpgrade()"><img class="w-8 h-8" src="./images/factorylove.png"></button>
 

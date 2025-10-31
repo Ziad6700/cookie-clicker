@@ -40,6 +40,7 @@ class ui {
             document.getElementById("cookieAchievement").style.backgroundColor = "#F5E9D4";
             document.getElementById("cookieAchievement").innerHTML = '<img src=./images/cookieachievement.png alt="cursor" class="w-10 h-8">';
             this.unlocked100Cookies = true; 
+            showmess
         } else if (this.counter < 100 && !this.unlocked100Cookies) {
              document.getElementById("cookieAchievement").style.display = "none";
         }
@@ -331,6 +332,7 @@ class ClickUpgrade {
     }
 }
 
+
 class GrandmaUpgrade {
     price;
     bought = false;
@@ -555,7 +557,11 @@ class AutoGenerater {
             
         } else {
             console.log("niet genoeg");
-        }
+            document.getElementById("notEnoughCookies").style.display = "block";
+            setTimeout(() => {
+            document.getElementById("notEnoughCookies").style.display = 'none';
+            }, 3000);
+        }        
     }
 
     generate() {

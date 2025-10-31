@@ -8,3 +8,7 @@ body {
   background-repeat: no-repeat; 
   background-position: center;  
 }
+
+.upgradeicon{
+  background-color: rgb(39, 236, 147);
+}
