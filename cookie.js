@@ -17,6 +17,7 @@ class ui {
 
     unlocked5Wizzard = false;
 
+    unlocked5Shipment = false;
 
     add(amount) {
         this.counter += amount;
@@ -34,94 +35,93 @@ class ui {
 
       checkAchievements(){
        
-        if (this.counter >= 100 && !this.unlocked100Cookies) {
+        if (this.counter >= 100) {
             
             document.getElementById("cookieAchievement").style.display = "block";
             document.getElementById("cookieAchievement").style.backgroundColor = "#F5E9D4";
             document.getElementById("cookieAchievement").innerHTML = '<img src=./images/cookieachievement.png alt="cursor" class="w-10 h-8">';
             this.unlocked100Cookies = true; 
-            showmess
-        } else if (this.counter < 100 && !this.unlocked100Cookies) {
+        } else if (this.counter < 100) {
              document.getElementById("cookieAchievement").style.display = "none";
         }
 
-         if (grandma.amount >= 5 && !this.unlocked5Grandma) {
+         if (grandma.amount >= 5) {
             
             document.getElementById("grandmaAchievement").style.display = "block";
             document.getElementById("grandmaAchievement").style.backgroundColor = "#F5E9D4";
             document.getElementById("grandmaAchievement").innerHTML = '<img src=./images/grandmaachievement.webp alt="cursor" class="w-10 h-8">';
             this.unlocked5Grandma = true; 
-        } else if (grandma.amount < 5 && !this.unlocked5Grandma) {
+        } else if (grandma.amount < 5) {
              document.getElementById("grandmaAchievement").style.display = "none";
         }
 
-         if (factory.amount >= 5 && !this.unlocked5Factory) {
+         if (factory.amount >= 5) {
             
             document.getElementById("factoryAchievement").style.display = "block";
             document.getElementById("factoryAchievement").style.backgroundColor = "#F5E9D4";
             document.getElementById("factoryAchievement").innerHTML = '<img src=./images/factoryachievement.png alt="cursor" class="w-10 h-8">';
             this.unlocked5Factory = true; 
-        } else if (factory.amount < 5 && !this.unlocked5Factory) {
+        } else if (factory.amount < 5) {
              document.getElementById("factoryAchievement").style.display = "none";
         }
 
-        if (mines.amount >= 5 && !this.unlocked5Mines) {
+        if (mines.amount >= 5) {
             
             document.getElementById("mineAchievement").style.display = "block";
             document.getElementById("mineAchievement").style.backgroundColor = "#F5E9D4";
             document.getElementById("mineAchievement").innerHTML = '<img src=./images/mineachievement.png alt="cursor" class="w-10 h-8">';
             this.unlocked5Mines = true; 
-        } else if (mines.amount < 5 && !this.unlocked5Mines) {
+        } else if (mines.amount < 5) {
              document.getElementById("mineAchievement").style.display = "none";
         }
 
-        if (farms.amount >= 5 && !this.unlocked5Farms) {
+        if (farms.amount >= 5) {
             
             document.getElementById("farmAchievement").style.display = "block";
             document.getElementById("farmAchievement").style.backgroundColor = "#F5E9D4";
             document.getElementById("farmAchievement").innerHTML = '<img src=./images/farmachievement.png alt="cursor" class="w-10 h-8">';
             this.unlocked5Farms = true; 
-        } else if (farms.amount < 5 && !this.unlocked5Farms) {
+        } else if (farms.amount < 5) {
              document.getElementById("farmAchievement").style.display = "none";
         }
        
-         if (bank.amount >= 5 && !this.unlocked5Bank) {
+         if (bank.amount >= 5) {
             
             document.getElementById("bankAchievement").style.display = "block";
             document.getElementById("bankAchievement").style.backgroundColor = "#F5E9D4";
             document.getElementById("bankAchievement").innerHTML = '<img src=./images/bankachievement.png alt="cursor" class="w-10 h-8">';
             this.unlocked5Bank = true; 
-        } else if (bank.amount < 5 && !this.unlocked5Farms) {
+        } else if (bank.amount < 5) {
              document.getElementById("bankAchievement").style.display = "none";
         }
 
-        if (temple.amount >= 5 && !this.unlocked5Temple) {
+        if (temple.amount >= 5) {
             
             document.getElementById("templeAchievement").style.display = "block";
             document.getElementById("templeAchievement").style.backgroundColor = "#F5E9D4";
             document.getElementById("templeAchievement").innerHTML = '<img src=./images/templeachievement.png alt="cursor" class="w-10 h-8">';
             this.unlocked5Temple = true; 
-        } else if (bank.amount < 5 && !this.unlocked5Temple) {
+        } else if (bank.amount < 5) {
              document.getElementById("templeAchievement").style.display = "none";
         }
 
-        if (wizzardTower.amount >= 5 && !this.unlocked5Wizzard) {
+        if (wizzardTower.amount >= 5) {
             
             document.getElementById("wizzardAchievement").style.display = "block";
             document.getElementById("wizzardAchievement").style.backgroundColor = "#F5E9D4";
             document.getElementById("wizzardAchievement").innerHTML = '<img src=./images/wizzardachievement.png alt="cursor" class="w-10 h-8">';
             this.unlocked5Wizzard = true; 
-        } else if (wizzardTower.amount < 5 && !this.unlocked5Wizzard) {
+        } else if (wizzardTower.amount < 5) {
              document.getElementById("wizzardAchievement").style.display = "none";
         }
 
-        if (shipment.amount >= 5 && !this.unlocked5Shipment) {
+        if (shipment.amount >= 5) {
             
             document.getElementById("shipmentAchievement").style.display = "block";
             document.getElementById("shipmentAchievement").style.backgroundColor = "#F5E9D4";
             document.getElementById("shipmentAchievement").innerHTML = '<img src=./images/shipmentachievement.png alt="cursor" class="w-10 h-8">';
             this.unlocked5Shipment = true; 
-        } else if (shipment.amount < 5 && !this.unlocked5Shipment) {
+        } else if (shipment.amount < 5) {
              document.getElementById("shipmentAchievement").style.display = "none";
         }
     }
@@ -348,7 +348,13 @@ class GrandmaUpgrade {
             grandma.cps = Math.floor(grandma.cps * 2);
             cookieTotal.showGrandmaUpgrade();
             cookieTotal.updateCPS();
-        }
+        } else {
+            console.log("niet genoeg");
+            document.getElementById("notEnoughCookies").style.display = "block";
+            setTimeout(() => {
+            document.getElementById("notEnoughCookies").style.display = 'none';
+            }, 3000);
+        }  
     }
 
     canGrannyShow() {
@@ -373,7 +379,13 @@ class FactoryUpgrade {
             factory.cps = Math.floor(factory.cps * 2);
             cookieTotal.showFactoriesUpgrade();
             cookieTotal.updateCPS();
-        }
+        } else {
+            console.log("niet genoeg");
+            document.getElementById("notEnoughCookies").style.display = "block";
+            setTimeout(() => {
+            document.getElementById("notEnoughCookies").style.display = 'none';
+            }, 3000);
+        }  
     }
 
     canFactoryShow() {
@@ -398,7 +410,13 @@ class MinesUpgrade {
             mines.cps = Math.floor(mines.cps * 2);
             cookieTotal.showMinesUpgrade();
             cookieTotal.updateCPS();
-        }
+        } else {
+            console.log("niet genoeg");
+            document.getElementById("notEnoughCookies").style.display = "block";
+            setTimeout(() => {
+            document.getElementById("notEnoughCookies").style.display = 'none';
+            }, 3000);
+        }  
     }
 
     canMinesShow() {
@@ -423,7 +441,13 @@ class FarmsUpgrade {
             farms.cps = Math.floor(farms.cps * 2);
             cookieTotal.showFarmsUpgrade();
             cookieTotal.updateCPS();
-        }
+        } else {
+            console.log("niet genoeg");
+            document.getElementById("notEnoughCookies").style.display = "block";
+            setTimeout(() => {
+            document.getElementById("notEnoughCookies").style.display = 'none';
+            }, 3000);
+        }  
     }
 
     canFarmShow() {
@@ -448,7 +472,13 @@ class BankUpgrade {
             bank.cps = Math.floor(bank.cps * 2);
             cookieTotal.showBankUpgrade();
             cookieTotal.updateCPS();
-        }
+        } else {
+            console.log("niet genoeg");
+            document.getElementById("notEnoughCookies").style.display = "block";
+            setTimeout(() => {
+            document.getElementById("notEnoughCookies").style.display = 'none';
+            }, 3000);
+        }  
     }
 
     canBankShow() {
@@ -473,7 +503,13 @@ class TempleUpgrade {
             temple.cps = Math.floor(temple.cps * 2);
             cookieTotal.showTempleUpgrade();
             cookieTotal.updateCPS();
-        }
+        } else {
+            console.log("niet genoeg");
+            document.getElementById("notEnoughCookies").style.display = "block";
+            setTimeout(() => {
+            document.getElementById("notEnoughCookies").style.display = 'none';
+            }, 3000);
+        }  
     }
 
     canTempleShow() {
@@ -498,7 +534,13 @@ class WizzardTowerUpgrade {
             wizzardTower.cps = Math.floor(wizzardTower.cps * 2);
             cookieTotal.showWizzardTowerUpgrade();
             cookieTotal.updateCPS();
-        }
+        } else {
+            console.log("niet genoeg");
+            document.getElementById("notEnoughCookies").style.display = "block";
+            setTimeout(() => {
+            document.getElementById("notEnoughCookies").style.display = 'none';
+            }, 3000);
+        }  
     }
 
     canWizzardTowerShow() {
@@ -523,7 +565,13 @@ class ShipmentUpgrade {
             shipment.cps = Math.floor(shipment.cps * 2);
             cookieTotal.showShipmentUpgrade();
             cookieTotal.updateCPS();
-        }
+        } else {
+            console.log("niet genoeg");
+            document.getElementById("notEnoughCookies").style.display = "block";
+            setTimeout(() => {
+            document.getElementById("notEnoughCookies").style.display = 'none';
+            }, 3000);
+        }  
     }
 
     canShipmentShow() {
@@ -608,5 +656,139 @@ let shipment = new AutoGenerater(750, 2000);
 let shipmentBooster = new ShipmentUpgrade(10);
 
 
+const SAVE_KEY = 'cookieClickerSaveV1';
+
+function saveGame() {
+  try {
+    const state = {
+      counter: Number(cookieTotal.counter) || 0,
+      unlocked100Cookies: !!cookieTotal.unlocked100Cookies,
+      unlocked5Grandma: !!cookieTotal.unlocked5Grandma,
+      unlocked5Factory: !!cookieTotal.unlocked5Factory,
+      unlocked5Mines: !!cookieTotal.unlocked5Mines,
+      unlocked5Farms: !!cookieTotal.unlocked5Farms,
+      unlocked5Bank: !!cookieTotal.unlocked5Bank,
+      unlocked5Temple: !!cookieTotal.unlocked5Temple,
+      unlocked5Wizzard: !!cookieTotal.unlocked5Wizzard,
+
+      clickerUpgrade: {
+        price: Number(clickerUpgrade.price) || 0,
+        amount: Number(clickerUpgrade.amount) || 0,
+        $upgradeAmount: Number(clickerUpgrade.$upgradeAmount) || 0
+      },
+      cookieClicker: {
+        cps: Number(cookieClicker1.cps) || 0
+      },
+
+      generators: {
+        grandma: { amount: Number(grandma.amount) || 0, price: Number(grandma.price) || null, cps: Number(grandma.cps) || 0 },
+        factory: { amount: Number(factory.amount) || 0, price: Number(factory.price) || null, cps: Number(factory.cps) || 0 },
+        mines: { amount: Number(mines.amount) || 0, price: Number(mines.price) || null, cps: Number(mines.cps) || 0 },
+        farms: { amount: Number(farms.amount) || 0, price: Number(farms.price) || null, cps: Number(farms.cps) || 0 },
+        bank: { amount: Number(bank.amount) || 0, price: Number(bank.price) || null, cps: Number(bank.cps) || 0 },
+        temple: { amount: Number(temple.amount) || 0, price: Number(temple.price) || null, cps: Number(temple.cps) || 0 },
+        wizzardTower: { amount: Number(wizzardTower.amount) || 0, price: Number(wizzardTower.price) || null, cps: Number(wizzardTower.cps) || 0 },
+        shipment: { amount: Number(shipment.amount) || 0, price: Number(shipment.price) || null, cps: Number(shipment.cps) || 0 },
+      },
+
+      boosters: {
+        grannyBooster: !!grannyBooster.bought,
+        factoryBooster: !!factoryBooster.bought,
+        mineBooster: !!mineBooster.bought,
+        farmBooster: !!farmBooster.bought,
+        bankBooster: !!bankBooster.bought,
+        templeBooster: !!templeBooster.bought,
+        wizzardTowerBooster: !!wizzardTowerBooster.bought,
+        shipmentBooster: !!shipmentBooster.bought
+      },
+      achievements: {
+        unlocked100Cookies: !!cookieTotal.unlocked100Cookies,
+        unlocked5Grandma: !!cookieTotal.unlocked5Grandma,
+        unlocked5Factory: !!cookieTotal.unlocked5Factory,
+        unlocked5Mines: !!cookieTotal.unlocked5Mines,
+        unlocked5Farms: !!cookieTotal.unlocked5Farms,
+        unlocked5Bank: !!cookieTotal.unlocked5Bank,
+        unlocked5Temple: !!cookieTotal.unlocked5Temple,
+        unlocked5Wizzard: !!cookieTotal.unlocked5Wizzard
+      },
+      savedAt: new Date().toISOString()
+    };
+
+    localStorage.setItem(SAVE_KEY, JSON.stringify(state));
+     console.log('Game saved', state);
+  } catch (e) {
+    console.error('Failed to save game', e);
+  }
+}
+
+function loadGame() {
+  try {
+    const raw = localStorage.getItem(SAVE_KEY);
+    if (!raw) return; 
+
+    const state = JSON.parse(raw);
+
+    cookieTotal.counter = Number(state.counter) || 0;
+    cookieTotal.unlocked100Cookies = !!state.unlocked100Cookies;
+    cookieTotal.unlocked5Grandma = !!state.unlocked5Grandma;
+    cookieTotal.unlocked5Factory = !!state.unlocked5Factory;
+    cookieTotal.unlocked5Mines = !!state.unlocked5Mines;
+    cookieTotal.unlocked5Farms = !!state.unlocked5Farms;
+    cookieTotal.unlocked5Bank = !!state.unlocked5Bank;
+    cookieTotal.unlocked5Temple = !!state.unlocked5Temple;
+    cookieTotal.unlocked5Wizzard = !!state.unlocked5Wizzard;
+
+    if (state.clickerUpgrade) {
+      clickerUpgrade.price = Number(state.clickerUpgrade.price) || clickerUpgrade.price;
+      clickerUpgrade.amount = Number(state.clickerUpgrade.amount) || clickerUpgrade.amount;
+      clickerUpgrade.$upgradeAmount = Number(state.clickerUpgrade.$upgradeAmount) || clickerUpgrade.$upgradeAmount;
+    }
+
+    if (state.cookieClicker) {
+      cookieClicker1.cps = Number(state.cookieClicker.cps) || cookieClicker1.cps;
+    }
+
+    const g = state.generators || {};
+    if (g.grandma) { grandma.amount = Number(g.grandma.amount) || 0; if (g.grandma.price) grandma.price = Number(g.grandma.price); if (g.grandma.cps) grandma.cps = Number(g.grandma.cps); }
+    if (g.factory) { factory.amount = Number(g.factory.amount) || 0; if (g.factory.price) factory.price = Number(g.factory.price); if (g.factory.cps) factory.cps = Number(g.factory.cps); }
+    if (g.mines) { mines.amount = Number(g.mines.amount) || 0; if (g.mines.price) mines.price = Number(g.mines.price); if (g.mines.cps) mines.cps = Number(g.mines.cps); }
+    if (g.farms) { farms.amount = Number(g.farms.amount) || 0; if (g.farms.price) farms.price = Number(g.farms.price); if (g.farms.cps) farms.cps = Number(g.farms.cps); }
+    if (g.bank) { bank.amount = Number(g.bank.amount) || 0; if (g.bank.price) bank.price = Number(g.bank.price); if (g.bank.cps) bank.cps = Number(g.bank.cps); }
+    if (g.temple) { temple.amount = Number(g.temple.amount) || 0; if (g.temple.price) temple.price = Number(g.temple.price); if (g.temple.cps) temple.cps = Number(g.temple.cps); }
+    if (g.wizzardTower) { wizzardTower.amount = Number(g.wizzardTower.amount) || 0; if (g.wizzardTower.price) wizzardTower.price = Number(g.wizzardTower.price); if (g.wizzardTower.cps) wizzardTower.cps = Number(g.wizzardTower.cps); }
+    if (g.shipment) { shipment.amount = Number(g.shipment.amount) || 0; if (g.shipment.price) shipment.price = Number(g.shipment.price); if (g.shipment.cps) shipment.cps = Number(g.shipment.cps); }
+
+  
+    if (state.boosters) {
+      grannyBooster.bought = !!state.boosters.grannyBooster;
+      factoryBooster.bought = !!state.boosters.factoryBooster;
+      mineBooster.bought = !!state.boosters.mineBooster;
+      farmBooster.bought = !!state.boosters.farmBooster;
+      bankBooster.bought = !!state.boosters.bankBooster;
+      templeBooster.bought = !!state.boosters.templeBooster;
+      wizzardTowerBooster.bought = !!state.boosters.wizzardTowerBooster;
+      shipmentBooster.bought = !!state.boosters.shipmentBooster;
+    }
+
+    document.getElementById("counter").textContent = cookieTotal.counter;
+    cookieTotal.buttonText();
+    cookieTotal.updateCPS();
+    cookieTotal.checkAchievements();
+
+  } catch (e) {
+    console.error('Failed to load game', e);
+  }
+}
+
+function clearSave() {
+  localStorage.removeItem(SAVE_KEY);
+  
+  location.reload();
+}
 
 
+setInterval(saveGame, 5000);
+
+window.addEventListener('beforeunload', saveGame);
+
+loadGame();
