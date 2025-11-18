@@ -2,13 +2,28 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  background-image: url('./../images/blue.png'); 
-  background-size: cover;       
-  background-repeat: no-repeat; 
-  background-position: center;  
+:root, [data-theme="default"] {
+  --theme-primary: #D2691E;
+  --theme-secondary: #78350F;
+  --theme-background: #F5E9D4;
+  --theme-text: #ffffff;
+  --theme-body: rgb(13, 89, 175);
 }
 
-.upgradeicon{
-  background-color: rgb(39, 236, 147);
+[data-theme="chocolate"] {
+  --theme-primary: #6e2f04;
+  --theme-secondary: #3a1c06;
+  --theme-background: #c25f0d;
+  --theme-text: #ffffff;
+  --theme-body: rgb(175, 156, 13);
 }
+
+
+
+/* [data-theme="default"]{
+  --backgroundImg: url('./../images/blue.png');
+}
+
+[data-theme="theme2"]{
+  --backgroundImg: url('./../images/red.png');
+} */

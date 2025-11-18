@@ -17,9 +17,13 @@ module.exports = {
         'spin-fast': 'spin 0.5s linear infinite',
         'pulse-heart': 'pulseheart 1.5s ease-in-out infinite',
       }, colors: {
-        lightbrown: '#78350F',
-        brown: '#D2691E',
-        cream: '#F5E9D4',
+    // Verwijst naar de variabelenamen in je input.css
+    'primary': 'var(--theme-primary)',
+    'secondary': 'var(--theme-secondary)',
+    'background': 'var(--theme-background)',
+    'text': 'var(--theme-text)', 
+    'body': 'var(--theme-body)', 
+    // ... andere kleuren ...
     }, height: {
       '7.5': '1.875rem',
       '112': '28rem',
